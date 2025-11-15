@@ -77,7 +77,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
         </div>
         
         <div className="mt-auto p-6">
-          <Button variant="hero" className="w-full">
+          <Button variant="hero" className="w-full" onClick={() => onTabChange('login')}>
             Join Network
           </Button>
         </div>

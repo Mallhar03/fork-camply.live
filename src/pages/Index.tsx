@@ -1,3 +1,5 @@
+import { Login } from "@/components/Login";
+import { SignUp } from "@/components/SignUp";
 import { Navigation } from "@/components/Navigation";
 import { Feed } from "@/components/Feed";
 import { Search } from "@/components/Search";
@@ -174,6 +176,10 @@ const Index = () => {
         return <Placements />;
       case "profile":
         return <Profile />;
+      case "login":
+        return <Login onSwitchToSignUp={() => handleTabChange("signup")} />;
+      case "signup":
+        return <SignUp onSwitchToLogin={() => handleTabChange("login")} />;
       default:
         return <Feed posts={posts} />;
     }
