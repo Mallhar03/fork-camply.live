@@ -28,7 +28,7 @@ const placementPosts: PlacementData[] = [
   {
     id: "1",
     company: "Google",
-    logo: "🔍",
+    logo: "https://www.google.com/favicon.ico",
     role: "Software Engineer I",
     package: "₹62 LPA",
     location: "Bangalore",
@@ -45,7 +45,7 @@ const placementPosts: PlacementData[] = [
   {
     id: "2",
     company: "Microsoft",
-    logo: "🏢",
+    logo: "https://www.microsoft.com/favicon.ico",
     role: "Product Manager I",
     package: "₹38 LPA",
     location: "Hyderabad",
@@ -62,7 +62,7 @@ const placementPosts: PlacementData[] = [
   {
     id: "3",
     company: "Amazon",
-    logo: "📦",
+    logo: "https://www.amazon.com/favicon.ico",
     role: "SDE I",
     package: "₹28 LPA",
     location: "Chennai",
@@ -79,7 +79,7 @@ const placementPosts: PlacementData[] = [
   {
     id: "4",
     company: "Flipkart",
-    logo: "🛍️",
+    logo: "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png",
     role: "UI/UX Designer",
     package: "₹12 LPA",
     location: "Bangalore",
@@ -96,7 +96,7 @@ const placementPosts: PlacementData[] = [
   {
     id: "5",
     company: "Zomato",
-    logo: "🍽️",
+    logo: "https://www.zomato.com/favicon.ico",
     role: "Data Analyst",
     package: "₹8 LPA",
     location: "Delhi",
@@ -113,7 +113,7 @@ const placementPosts: PlacementData[] = [
   {
     id: "6",
     company: "Paytm",
-    logo: "💳",
+    logo: "https://paytm.com/favicon.ico",
     role: "Frontend Developer",
     package: "₹15 LPA",
     location: "Noida",
@@ -126,7 +126,109 @@ const placementPosts: PlacementData[] = [
     comments: 18,
     tags: ["React", "JavaScript", "CSS"],
     preview: "Live coding session building a payment component, optimizing React performance, and CSS animations..."
-  }
+  },
+  {
+    id: "7",
+    company: "Oracle",
+    logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
+    role: "Database Administrator",
+    package: "₹22 LPA",
+    location: "Hyderabad",
+    difficulty: "Medium",
+    type: "Interview",
+    author: "@sql_master",
+    college: "NIT Trichy",
+    timeAgo: "2d",
+    upvotes: 95,
+    comments: 11,
+    tags: ["SQL", "DBA", "Cloud"],
+    preview: "Two technical rounds focused on database architecture, recovery strategies, and cloud migration (OCI)..."
+}
+// {
+//     id: "8",
+//     company: "TCS",
+//     logo: "https://logos-world.net/wp-content/uploads/2020/07/TCS-Logo.png",
+//     role: "Assistant System Engineer",
+//     package: "₹4.5 LPA",
+//     location: "Mumbai",
+//     difficulty: "Easy",
+//     type: "Online Test",
+//     author: "@tcs_ninja",
+//     college: "SRM University",
+//     timeAgo: "1d",
+//     upvotes: 350,
+//     comments: 85,
+//     tags: ["Aptitude", "Verbal", "C Programming"],
+//     preview: "The TCS NQT test was easy to medium. The coding questions involved basic array manipulation and string logic."
+// },
+// {
+//     id: "9",
+//     company: "Accenture",
+//     logo: "https://logos-world.net/wp-content/uploads/2020/07/Accenture-Logo.png",
+//     role: "Software Development Analyst",
+//     package: "₹6.5 LPA",
+//     location: "Pune",
+//     difficulty: "Medium",
+//     type: "Interview",
+//     author: "@consultant_ria",
+//     college: "VIT Vellore",
+//     timeAgo: "4d",
+//     upvotes: 180,
+//     comments: 35,
+//     tags: ["Consulting", "Cloud", "Agile"],
+//     preview: "Three interviews: technical screening, communication assessment, and a final discussion about projects and fit."
+// },
+// {
+//     id: "10",
+//     company: "Adobe",
+//     logo: "https://logos-world.net/wp-content/uploads/2020/11/Adobe-Logo.png",
+//     role: "Product Intern (PPO)",
+//     package: "₹40 LPA",
+//     location: "Noida",
+//     difficulty: "Hard",
+//     type: "Interview",
+//     author: "@design_ace",
+//     college: "IIIT Hyderabad",
+//     timeAgo: "1w",
+//     upvotes: 210,
+//     comments: 40,
+//     tags: ["Design Systems", "UI/UX", "Portfolio"],
+//     preview: "Focused on solving a complex design problem on a whiteboard. Heavy emphasis on user research and prototyping tools."
+// },
+// {
+//     id: "11",
+//     company: "L&T",
+//     logo: "https://logos-world.net/wp-content/uploads/2020/12/Larsen-Toubro-Logo.png",
+//     role: "Graduate Engineer Trainee (GET)",
+//     package: "₹7 LPA",
+//     location: "Mumbai",
+//     difficulty: "Medium",
+//     type: "Group Discussion",
+//     author: "@core_mech",
+//     college: "IIT Kharagpur",
+//     timeAgo: "1w",
+//     upvotes: 60,
+//     comments: 10,
+//     tags: ["Mechanical", "Civil", "Aptitude"],
+//     preview: "GD topic was 'India's Infrastructure Challenges vs. Digital India'. Post-GD technical interview was brief."
+// },
+// {
+//     id: "12",
+//     company: "Wipro",
+//     logo: "https://logos-world.net/wp-content/uploads/2020/06/Wipro-Logo.png",
+//     role: "Project Engineer",
+//     package: "₹3.8 LPA",
+//     location: "Chennai",
+//     difficulty: "Easy",
+//     type: "Online Test",
+//     author: "@fresh_grad",
+//     college: "Anna University",
+//     timeAgo: "2w",
+//     upvotes: 280,
+//     comments: 65,
+//     tags: ["Verbal", "Logic", "SQL"],
+//     preview: "The Wipro Elite NTH was mainly based on quantitative aptitude and verbal ability. Coding was straightforward C/Python."
+// }
 ];
 
 export function Placements() {
@@ -205,6 +307,7 @@ export function Placements() {
       <div className="sticky top-0 bg-background/95 backdrop-blur p-4 border-b md:border-none">
         <h1 className="text-xl font-bold text-foreground md:hidden">Placements</h1>
       </div>
+    
 
       <div className="px-4 space-y-6 pb-20 md:pb-4">
         {/* Filters */}
@@ -261,7 +364,11 @@ export function Placements() {
                 {/* Header */}
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="text-2xl">{post.logo}</div>
+                    <img 
+                      src={post.logo} 
+                      alt={`${post.company} logo`} 
+                      className="h-6 w-6 object-contain rounded-sm" // Use h-6 w-6 for a clean size
+                    />
                     <div>
                       <h3 className="font-semibold text-foreground">{post.company}</h3>
                       <p className="text-sm text-muted-foreground">{post.role}</p>
