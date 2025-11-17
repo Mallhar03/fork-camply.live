@@ -316,6 +316,20 @@ export function Placements() {
             <Briefcase className="h-5 w-5 text-accent" />
             <h2 className="text-lg font-semibold text-foreground">Placement Experiences</h2>
           </div>
+          {/* bottton to add exp in the placemt */}
+          <div style={{ paddingLeft: "5px", paddingRight: "5px" }}>
+              <Button
+                className="w-full py-3 text-sm font-semibold mb-6 "
+                onClick={() => toast({
+                title: "Post Your Experience",
+                description: "Opening form to submit your placement experience..."
+                 })}
+                          >
+                  Post Your Experience
+              </Button>
+          </div>
+          
+
           
           <div className="flex gap-2 overflow-x-auto pb-2">
             {[
