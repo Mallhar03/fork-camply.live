@@ -11,27 +11,31 @@ const port = process.env.PORT || 5000
 //bro i dont understand this......
 app.use(cors(
     {
-        origin :process.env.NODE_ENV === 'production' ? 'https://camply.live' : 'http://localhost:5173',
-        credentials : true
+        origin: process.env.NODE_ENV === 'production' ? 'https://camply.live' : 'http://localhost:5173',
+        credentials: true
     }
 ))
 app.use(express.json())
 
 // Health check endpoint for Render
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'ok' })
+    const readyState = mongoose.connection.readyState
+
+    if (readyState === 1) res.status(200).json({ status: 'ok' })
+    else res.status(503).json({ status: 'error', database: 'disconnected' })
+
 })
 
 app.get('/api/posts', async (req, res) => {
-  try {
-    // .find() gets everything
-    // .sort({ creationTime: -1 }) sorts by newest first (-1 means descending)
-    const posts = await Post.find().sort({ createdAt: -1 }) // the order is still ascending even after testing
-    
-    res.json(posts)
-  } catch (error) {
-    res.status(500).json({ error: error.message })
-  }
+    try {
+        // .find() gets everything
+        // .sort({ creationTime: -1 }) sorts by newest first (-1 means descending)
+        const posts = await Post.find().sort({ createdAt: -1 }) // the order is still ascending even after testing
+
+        res.json(posts)
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
 })
 
 app.post('/api/posts', async (req, res) => {
@@ -40,7 +44,7 @@ app.post('/api/posts', async (req, res) => {
         const newPost = new Post({
             username,
             trustLevel,
-            content : comment,
+            content: comment,
             category
         })
         // Save it to the Database
@@ -62,6 +66,7 @@ mongoose.connect(process.env.MONGO_URI)
         app.listen(port, () => {
             console.log(`Server listening on http://localhost:${port}`)
         })
+
     })
     .catch((error) => {
         console.log(error)
