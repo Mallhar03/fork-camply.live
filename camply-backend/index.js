@@ -5,7 +5,7 @@ require('dotenv').config()
 const Post = require('./models/Posts')
 
 const app = express()
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 // Middleware      
 //bro i dont understand this......
